@@ -1,0 +1,18 @@
+{
+  "name": "bonusly-client",
+  "version": "1.0.0",
+  "description": " A bonusly node client consumes the Bonusly Restful API",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "keywords": [
+    "bonus",
+    "bonusly"
+  ],
+  "author": "Nick Luo <nick.luo@icloud.com>",
+  "license": "MIT",
+  "dependencies": {
+    "request": "^2.61.0"
+  }
+}
