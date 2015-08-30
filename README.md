@@ -1,7 +1,6 @@
-# bonusly-node-client
-
 ## What
-A nodejs client that consumes the Bonusly API to retrieve/send bonuses
+
+A node client that consumes the Bonusly API to (currently support) retrieve/send bonuses
 
 ## Quick Reference
 
