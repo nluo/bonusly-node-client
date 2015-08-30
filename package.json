@@ -1,6 +1,6 @@
 {
   "name": "bonusly-client",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": " A nodejs client that consumes the Bonusly API to retrieve/send bonuses",
   "main": "index.js",
   "scripts": {
