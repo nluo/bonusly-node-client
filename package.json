@@ -10,6 +10,10 @@
     "bonus",
     "bonusly"
   ],
+  "repository": {
+   "type": "git",
+   "url": "https://github.com/nluo/bonusly-node-client.git"
+  },
   "author": "Nick Luo <nick.luo@icloud.com>",
   "license": "MIT",
   "dependencies": {
