@@ -35,7 +35,7 @@ client.getBonuses(function(error, results) {
 #### Give Bonus to someone
 
 API:
-```javascipt
+```javascript
 client.giveBonus(receiverEmail, reason, amount, callback);
 ```
 To create a bonus for someone, you would need to pass the receiverEmail, reason and the amount of the bonus:
