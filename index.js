@@ -16,9 +16,10 @@ BonuslyClient.prototype.getBonuses = function(callback) {
     var client = this;
     kgo
     ({
-        method: 'bonuses'
+        method: 'bonuses',
+        qs: []
     })
-    ('request', ['method'], client.sendGetRequest.bind(client))
+    ('request', ['method', 'qs'], client.sendGetRequest.bind(client))
     ('process', ['request'], client.parseResponse)
     (['process'], function(result){
         callback(null, result)
@@ -27,7 +28,23 @@ BonuslyClient.prototype.getBonuses = function(callback) {
     });
 };
 
-BonuslyClient.prototype.giveBounus = function(receiverEmail, reason, amount, callback) {
+BonuslyClient.prototype.getBonusForId = function(bonusId, callback) {
+    var client = this;
+    kgo
+    ({
+        method: 'bonuses/' + bonusId,
+        qs: []
+    })
+    ('request', ['method', 'qs'], client.sendGetRequest.bind(client))
+    ('process', ['request'], client.parseResponse)
+    (['process'], function(result){
+        callback(null, result)
+    }).on('error', function(error){
+        callback(error);
+    });
+};
+
+BonuslyClient.prototype.giveBonus = function(receiverEmail, reason, amount, callback) {
     var client = this;
     if (!callback) {
         return callback(new Error('You must pass all the required arguemnts: receiverEmail, reason, amount and a callback'));
@@ -65,15 +82,19 @@ BonuslyClient.prototype.sendPostRequest = function(method, data, callback) {
 };
 
 
-BonuslyClient.prototype.sendGetRequest = function(method, callback) {
+BonuslyClient.prototype.sendGetRequest = function(method, data, callback) {
     var client = this;
-    url = client.host + '/' + method + '?access_token=' + client.accessToken;
+
+    data.access_token = client.accessToken;
+
+    url = client.host + '/' + method;
     request
     (
         {
             method: 'GET',
             uri: url,
-            json: true
+            json: true,
+            qs: data
         },
         callback
     );
