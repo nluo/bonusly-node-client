@@ -13,6 +13,7 @@
   "author": "Nick Luo <nick.luo@icloud.com>",
   "license": "MIT",
   "dependencies": {
+    "kgo": "^2.0.5",
     "request": "^2.61.0"
   }
 }
