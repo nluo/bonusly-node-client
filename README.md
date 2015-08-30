@@ -13,7 +13,7 @@ A nodejs client that consumes the Bonusly API to retrieve/send bonuses
 #### Use it
 
 ```javascript
-var BonuslyClient = require('./'),
+var BonuslyClient = require('bonusly-node-client'),
     client = new BonuslyClient('Your Access Token');
 ```
 
@@ -54,9 +54,6 @@ client.giveBounus('bob.smith@majigger.com', 'Because bob is awesome', 20, functi
 
 ## Test
 
-``` 
+```
 npm test
 ```
-
-
-
