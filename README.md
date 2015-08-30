@@ -30,6 +30,21 @@ client.getBonuses(function(error, results) {
     console.log('The list of bonuses are', results);
 });
 
+#### Retrieve a specific bonus
+
+ To get a specific bonus detail call the getBonus function with the bonusID:
+
+ API
+ ```javascript
+ client.getBonus(bonusId, callback);
+ ```
+
+Example:
+
+```javascript
+client.getBonus('55a3555f6c8277476500000c', function(error, result){
+    ...
+});
 ```
 
 #### Give Bonus to someone
