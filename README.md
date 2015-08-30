@@ -30,6 +30,8 @@ client.getBonuses(function(error, results) {
     console.log('The list of bonuses are', results);
 });
 
+```
+
 #### Retrieve a specific bonus
 
  To get a specific bonus detail call the getBonus function with the bonusID:
