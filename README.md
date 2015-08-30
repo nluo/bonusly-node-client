@@ -17,6 +17,9 @@ var BonuslyClient = require('./'),
     client = new BonuslyClient('Your Access Token');
 ```
 
+
+#### Retrive bonuses:
+
 To retrieve all the bonuses, you simply call the getBonuses method with callback:
 
 ```javascript
