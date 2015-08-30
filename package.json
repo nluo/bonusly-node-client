@@ -1,6 +1,6 @@
 {
   "name": "bonusly-client",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": " A nodejs client that consumes the Bonusly API to retrieve/send bonuses",
   "main": "index.js",
   "scripts": {
@@ -11,8 +11,8 @@
     "bonusly"
   ],
   "repository": {
-   "type": "git",
-   "url": "https://github.com/nluo/bonusly-node-client.git"
+    "type": "git",
+    "url": "https://github.com/nluo/bonusly-node-client.git"
   },
   "author": "Nick Luo <nick.luo@icloud.com>",
   "license": "MIT",
