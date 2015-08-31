@@ -6,13 +6,13 @@ A node client that consumes the Bonusly API to (currently support) retrieve/send
 
 #### Installation
 ```
-  npm i --save bonusly-node-client
+  npm i --save bonusly-client
 ```
 
 #### Use it
 
 ```javascript
-var BonuslyClient = require('bonusly-node-client'),
+var BonuslyClient = require('bonusly-client'),
     client = new BonuslyClient('Your Access Token');
 ```
 
