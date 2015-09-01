@@ -60,7 +60,7 @@ BonuslyClient.prototype.giveBonus = function(receiverEmail, reason, amount, call
         if (error) {
             return callback(error);
         }
-        client.parseResponse(response, body, callback);
+        client.parseResponse(response, callback);
     });
 };
 
