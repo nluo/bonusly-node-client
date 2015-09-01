@@ -5,7 +5,7 @@ A node client that consumes the Bonusly API to (currently support) retrieve/send
 ## Quick Reference
 
 #### Installation
-```
+```javascript
   npm i --save bonusly-client
 ```
 
