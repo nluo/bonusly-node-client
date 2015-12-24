@@ -12,6 +12,22 @@ function BonuslyClient(token) {
     this.accessToken = token;
 };
 
+BonuslyClient.prototype.getUsers = function (callback) {
+  var client = this;
+  kgo
+  ({
+      method: 'users',
+      qs: []
+  })
+  ('request', ['method', 'qs'], client.sendGetRequest.bind(client))
+  ('process', ['request'], client.parseResponse)
+  (['process'], function(result){
+      callback(null, result)
+  }).on('error', function(error){
+      callback(error);
+  });
+}
+
 BonuslyClient.prototype.getBonuses = function(callback) {
     var client = this;
     kgo
